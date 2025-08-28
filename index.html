@@ -29,18 +29,18 @@
   </head>
   <body class="bg-[#f5fff6]" >
     <!-- this is nav section -->
-    <nav class="h-[80px] flex justify-between items-center py-6 px-14">
-      <div class="flex gap-2 items-center">
+    <nav class="nav h-[80px] flex justify-between items-center py-6 px-14">
+      <div class="flex nav-img-section gap-2 items-center">
         <img src="./assets/logo.png" class="max-h-[60px]" alt="" srcset="" />
         <h1 class="text-[#006747] font-bold text-2xl w-[135px]">
           Emergency Service
         </h1>
       </div>
-      <div class="flex items-center gap-3">
+      <div class="nav-main-section flex items-center gap-3">
         <div
-          class="flex items-center justify-center gap-2.5 bg-[#41ff6b1a] w-[123px] h-[50px] rounded-3xl"
+          class="heart-section flex items-center justify-center gap-2.5 bg-[#41ff6b1a] w-[123px] h-[50px] rounded-3xl"
         >
-          <p class="text-2xl font-bold">0</p>
+          <p class="text-2xl font-bold" id="heart">3</p>
           <img
             src="./assets/heart.png"
             class="max-w-[30px] max-h-[30px]"
@@ -49,9 +49,9 @@
           />
         </div>
         <div
-          class="flex items-center justify-center gap-2.5 bg-[#41ff6b1a] w-[123px] h-[50px] rounded-3xl"
+          class="coin-section flex items-center justify-center gap-2.5 bg-[#41ff6b1a] w-[123px] h-[50px] rounded-3xl"
         >
-          <p class="text-2xl font-bold">100</p>
+          <p class="text-2xl font-bold" ><span id="coin">100</span></p>
           <img
             src="./assets/coin.png"
             class="max-w-[30px] max-h-[30px]"
@@ -61,9 +61,9 @@
         </div>
         <div>
           <button
-            class="btn btn-active btn-success text-white h-[50px] px-9 bg-[#00A63E] rounded-4xl"
+            class="btn copy-btn btn-active btn-success text-white h-[50px] px-9 bg-[#00A63E] rounded-4xl"
           >
-            <span>0</span>Copy
+            <span id="main-copy">0</span>Copy
           </button>
         </div>
       </div>
@@ -104,8 +104,8 @@
                 <h1 class="font-bold text-2xl mt-9">999</h1>
                 <div class="  text-[#5C5C5C] rounded-xl p-2 bg-[#F2F2F2] flex justify-center items-center w-[40px] h-[25px]"><p>All</p></div>
               <div class="mt-2  gap-2">
-                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg"><i class="fa-solid fa-copy "></i>Copy</button>
-                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg" id="emergency-copy"><i class="fa-solid fa-copy "></i>Copy</button>
+                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold call" id="call" ><i class="fa-solid fa-phone "></i>Call</button>
                 </div>
 
               </div>
@@ -123,8 +123,8 @@
                 <h1 class="font-bold text-2xl mt-9">999</h1>
                 <div class="  text-[#5C5C5C] rounded-xl p-2 bg-[#F2F2F2] flex justify-center items-center w-[60px] h-[25px]"><p>Police</p></div>
                <div class="mt-2  gap-2">
-                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg"><i class="fa-solid fa-copy "></i>Copy</button>
-                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg" id="police-copy"><i class="fa-solid fa-copy "></i>Copy</button>
+                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold call"><i class="fa-solid fa-phone "></i>Call</button>
                 </div>
 
               </div>
@@ -142,8 +142,8 @@
                 <h1 class="font-bold text-2xl mt-9">999</h1>
                 <div class="  text-[#5C5C5C] rounded-xl p-2 bg-[#F2F2F2] flex justify-center items-center w-[40px] h-[25px]"><p>Fire</p></div>
                 <div class="mt-2  gap-2">
-                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg"><i class="fa-solid fa-copy "></i>Copy</button>
-                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg" id="fire-copy"><i class="fa-solid fa-copy "></i>Copy</button>
+                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold call"><i class="fa-solid fa-phone "></i>Call</button>
                 </div>
 
               </div>
@@ -161,8 +161,8 @@
                 <h1 class="font-bold text-2xl mt-9">1994-999999</h1>
                 <div class="  text-[#5C5C5C] rounded-xl p-2 bg-[#F2F2F2] flex justify-center items-center w-[60px] h-[25px]"><p>Health</p></div>
               <div class="mt-2  gap-2">
-                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg"><i class="fa-solid fa-copy "></i>Copy</button>
-                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg" id="ambulance-copy"><i class="fa-solid fa-copy "></i>Copy</button>
+                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold call"><i class="fa-solid fa-phone "></i>Call</button>
                 </div>
 
               </div>
@@ -180,8 +180,8 @@
                 <h1 class="font-bold text-2xl mt-9">109</h1>
                 <div class="  text-[#5C5C5C] rounded-xl p-2 bg-[#F2F2F2] flex justify-center items-center w-[45px] h-[25px]"><p>Help</p></div>
               <div class="mt-2  gap-2">
-                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg"><i class="fa-solid fa-copy "></i>Copy</button>
-                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg" id="women-copy"><i class="fa-solid fa-copy  " ></i>Copy</button>
+                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold call"><i class="fa-solid fa-phone "></i>Call</button>
                 </div>
               </div>
             </div>
@@ -198,8 +198,8 @@
                 <h1 class="font-bold text-2xl mt-9">106</h1>
                 <div class="  text-[#5C5C5C] rounded-xl p-2 bg-[#F2F2F2] flex justify-center items-center w-[45px] h-[25px]"><p>Govt.</p></div>
               <div class="mt-2  gap-2">
-                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg"><i class="fa-solid fa-copy "></i>Copy</button>
-                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg " id="anti-copy"><i class="fa-solid fa-copy " ></i>Copy</button>
+                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold call"><i class="fa-solid fa-phone "></i>Call</button>
                 </div>
 
               </div>
@@ -217,8 +217,8 @@
                 <h1 class="font-bold text-2xl mt-9">16216</h1>
                 <div class="  text-[#5C5C5C] rounded-xl p-2 bg-[#F2F2F2] flex justify-center items-center w-[80px] h-[25px]"><p>Electricity</p></div>
                <div class="mt-2  gap-2">
-                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg"><i class="fa-solid fa-copy "></i>Copy</button>
-                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg "id="electricity-copy" ><i class="fa-solid fa-copy " ></i>Copy</button>
+                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold call"><i class="fa-solid fa-phone "></i>Call</button>
                 </div>
 
               </div>
@@ -236,8 +236,8 @@
                 <h1 class="font-bold text-2xl mt-9">16445</h1>
                 <div class="  text-[#5C5C5C] rounded-xl p-2 bg-[#F2F2F2] flex justify-center items-center w-[50px] h-[25px]"><p>NGO</p></div>
              <div class="mt-2  gap-2">
-                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg"><i class="fa-solid fa-copy "></i>Copy</button>
-                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg" id="brac-copy"><i class="fa-solid fa-copy " ></i>Copy</button>
+                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold call"><i class="fa-solid fa-phone "></i>Call</button>
                 </div>
 
               </div>
@@ -255,8 +255,8 @@
                 <h1 class="font-bold text-2xl mt-9">163</h1>
                 <div class="  text-[#5C5C5C] rounded-xl p-2 bg-[#F2F2F2] flex justify-center items-center w-[50px] h-[25px]"><p>Travel</p></div>
                 <div class="mt-2  gap-2">
-                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg"><i class="fa-solid fa-copy "></i>Copy</button>
-                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold"><i class="fa-solid fa-phone "></i>Call</button>
+                    <button class="btn px-16 border-[#D4D6D5]  rounded-lg" id="railway-copy"><i class="fa-solid fa-copy " ></i>Copy</button>
+                   <button class="btn px-16 bg-[#00A63E] text-white  rounded-lg font-semibold call"><i class="fa-solid fa-phone "></i>Call</button>
                 </div>
 
               </div>
@@ -266,21 +266,35 @@
 
 
           </section>
-          <section class="history-section w-[20%] mr-2 mt-4 bg-white   h-full">
-            <section>
-              <div class="flex justify-between items-center">
-                <div class="flex flex-row justify-center items-center gap-2 ">
+          <section class="history-main-section w-[20%] mr-2 mt-4 bg-white p-3   h-[800px]">
+            
+              <div class=" history-section-div flex justify-between items-center">
+                <div class=" history-section-icon flex flex-row justify-center items-center gap-2 ">
                   <i class="fa-solid fa-clock text-[#5C5C5C] text-xl"></i>
                   <h1 class="text-2xl font-semibold">Call History</h1>
                 </div>
-                <div> 
+                <div class="clear-btn-section"> 
                   <button class="btn btn-active btn-succes px-9 py-4  text-xl rounded-2xl text-white bg-[#00A63E]">Clear</button>
                 </div>
               </div>
-            </section>
+
+            
+            
+            <div id="transation-container">
+              
+
+            </div>
+
 
           </section>
         
     </section>
+
+    <!-- js link  -->
+     <script src="./js/main.js"></script>
+
+    
+
+     </script>
   </body>
 </html>
