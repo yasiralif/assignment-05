@@ -240,8 +240,6 @@ document.getElementById("brac-copy").addEventListener("click", function () {
 */
 
 
-
-
 // aita diya korle copy yar jonno onek tara tar hoi 
 //  copy esay fucntion 
 
@@ -251,6 +249,7 @@ function copyMe(id, serviceName, serviceNumber) {
      const copy = innerTextToInt("main-copy");
     const total1 = coin - 20;
     const total = copy + 1;
+    
     if (copy>=5 || total1 < 0) {
       return alert("❌ To make a copy, you need at least 20 Coin");
     }
@@ -260,6 +259,8 @@ function copyMe(id, serviceName, serviceNumber) {
     const headtext = document.querySelector(serviceName).innerText;
 
     const head2text = document.querySelector(serviceNumber).innerText;
+    // this is copy number fucntion
+    navigator.clipboard.writeText(head2text)
     alert("📋 Copy "+headtext+" : " + head2text);
 
     const data = {
@@ -369,3 +370,7 @@ document.getElementById("clear").addEventListener('click',function(){
   const transationContainer = document.getElementById("transation-container");
   transationContainer.style.display='none';
 })
+
+
+
+
