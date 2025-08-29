@@ -8,7 +8,11 @@ function innerTextToInt(id) {
   return userInputValuue;
 }
 
-// "emergency-copy" section
+
+// ai function diye korte gele onek somoy lage 
+/*
+
+"emergency-copy" section
 document
   .getElementById("emergency-copy")
   .addEventListener("click", function () {
@@ -32,7 +36,9 @@ document
 
     history.push(data);
   });
-// 'police-copy' section
+
+
+'police-copy' section
 document.getElementById("police-copy").addEventListener("click", function () {
   const copy = innerTextToInt("main-copy");
   console.log(copy);
@@ -54,7 +60,9 @@ document.getElementById("police-copy").addEventListener("click", function () {
   history.push(data);
   historyCall();
 });
-// fire copy section
+
+
+fire copy section
 document.getElementById("fire-copy").addEventListener("click", function () {
   const copy = innerTextToInt("main-copy");
   console.log(copy);
@@ -77,7 +85,9 @@ document.getElementById("fire-copy").addEventListener("click", function () {
   history.push(data);
   historyCall();
 });
-// "ambulance-copy" section
+
+
+"ambulance-copy" section
 document
   .getElementById("ambulance-copy")
   .addEventListener("click", function () {
@@ -101,7 +111,9 @@ document
     history.push(data);
     historyCall();
   });
-// "women-copy" section
+
+
+"women-copy" section
 document.getElementById("women-copy").addEventListener("click", function () {
   const copy = innerTextToInt("main-copy");
   console.log(copy);
@@ -123,7 +135,10 @@ document.getElementById("women-copy").addEventListener("click", function () {
   history.push(data);
   historyCall();
 });
-// "anti-copy" section
+
+
+
+"anti-copy" section
 document.getElementById("anti-copy").addEventListener("click", function () {
   const copy = innerTextToInt("main-copy");
   console.log(copy);
@@ -145,7 +160,9 @@ document.getElementById("anti-copy").addEventListener("click", function () {
   history.push(data);
   historyCall();
 });
-// ("electricity-copy")section
+
+
+("electricity-copy")section
 document
   .getElementById("electricity-copy")
   .addEventListener("click", function () {
@@ -170,7 +187,9 @@ document
 
     historyCall();
   });
-//('railway-copy') section
+('railway-copy') section
+
+
 document.getElementById("railway-copy").addEventListener("click", function () {
   const copy = innerTextToInt("main-copy");
   console.log(copy);
@@ -192,7 +211,9 @@ document.getElementById("railway-copy").addEventListener("click", function () {
   history.push(data);
   historyCall();
 });
-//"brac-copy" section
+"brac-copy" section
+
+
 document.getElementById("brac-copy").addEventListener("click", function () {
   const copy = innerTextToInt("main-copy");
   console.log(copy);
@@ -216,25 +237,33 @@ document.getElementById("brac-copy").addEventListener("click", function () {
 });
 
 
+*/
 
 
-// call repeat function
-function callMe(id, serviceName, serviceNumber) {
+
+
+// aita diya korle copy yar jonno onek tara tar hoi 
+//  copy esay fucntion 
+
+function copyMe(id, serviceName, serviceNumber) {
   document.getElementById(id).addEventListener("click", function () {
     const coin = innerTextToInt("coin");
+     const copy = innerTextToInt("main-copy");
     const total1 = coin - 20;
-    if (total1 < 0) {
-      return alert("you dont have any coin ");
+    const total = copy + 1;
+    if (copy>=5 || total1 < 0) {
+      return alert("❌ To make a copy, you need at least 20 Coin");
     }
 
     document.getElementById("coin").innerText = total1;
+    document.getElementById("main-copy").innerText = total;
     const headtext = document.querySelector(serviceName).innerText;
 
     const head2text = document.querySelector(serviceNumber).innerText;
-    alert("you copy the number:" + head2text);
+    alert("📋 Copy "+headtext+" : " + head2text);
 
     const data = {
-      name: headtext,
+      name:"Copy "+ headtext,
       number: head2text,
       date: new Date().toLocaleTimeString(),
     };
@@ -244,11 +273,50 @@ function callMe(id, serviceName, serviceNumber) {
   });
 }
 
-document.getElementById("women-call").addEventListener("click", function () {
-  console.log(5);
-});
+// all copy envet 
+copyMe("emergency-copy", ".national-call", ".national-number");
+copyMe("police-copy", ".police-call", ".police-number");
+copyMe("fire-copy", ".fire-call", ".fire-number");
+copyMe("ambulance-copy", ".ambulance-call", ".ambulance-number");
+copyMe("women-copy", ".men", ".women-number");
+copyMe("anti-copy", ".anti-call", ".anti-number");
+copyMe("electricity-copy", ".electricity-call", ".electricity-number");
+copyMe("brac-copy", ".brac-call", ".brac-number");
+copyMe("railway-copy", ".railway-call", ".railway-number");
+
+
+
+
+
+// aita diya korle call yar jonno onek tara tar hoi 
+// call repeat function
+function callMe(id, serviceName, serviceNumber) {
+  document.getElementById(id).addEventListener("click", function () {
+    const coin = innerTextToInt("coin");
+    const total1 = coin - 20;
+    if (total1 < 0) {
+      return alert("❌ To make a call, you need at least 20 Coin");
+    }
+
+    document.getElementById("coin").innerText = total1;
+    const headtext = document.querySelector(serviceName).innerText;
+
+    const head2text = document.querySelector(serviceNumber).innerText;
+    alert("📞 Calling "+headtext+" : " + head2text);
+
+    const data = {
+      name:"Calling "+ headtext,
+      number: head2text,
+      date: new Date().toLocaleTimeString(),
+    };
+
+    history.push(data);
+    historyCall();
+  });
+}
 //  all call
-callMe("emergency-call", ".national-call", ".national-number");
+
+callMe("emergency-call",".national-call",".national-number");
 callMe("police-call", ".police-call", ".police-number");
 callMe("fire-call", ".fire-call", ".fire-number");
 callMe("ambulance-call", ".ambulance-call", ".ambulance-number");
@@ -258,6 +326,7 @@ callMe("electricity-call", ".electricity-call", ".electricity-number");
 callMe("brac-call", ".brac-call", ".brac-number");
 
 callMe("railway-call", ".railway-call", ".railway-number");
+
 //call option event
 
 // heart icon section

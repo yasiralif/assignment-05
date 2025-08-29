@@ -3,12 +3,17 @@
     font-family: 'Hind Madurai';
 
 }
-/* .call-hover:hover{
+.my-call-btn:hover{
     background-color: #00A63E;
 
-} */
+}
+.call:hover{
+    background-color: #5C5C5C;
 
-
+}
+#clear:hover{
+    background-color: #5C5C5C;
+}
 
 
 @media screen and (max-width: 640px) {
